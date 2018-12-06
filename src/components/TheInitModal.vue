@@ -54,7 +54,7 @@ export default {
   methods: {
     goToDoc() {
       this.open = false
-      setTimeout(() => this.$router.push({ name: 'about' }), 200)
+      setTimeout(() => this.$router.push({ name: 'edit' }), 200)
     },
   },
 }
