@@ -22,29 +22,16 @@
         </h5>
 
         <div class="row flex-spaces child-borders child-shadows-hover">
-          <div class="option-block xs-4 sm-5 col margin-small">
-            <p style="font-size: 3rem;">
-              <span style="color: rgba(2, 2, 2, 0.6)">
-                <i class="fas fa-file-upload" />
-              </span>
-            </p>
-            <span>
-              Upload your Html
-            </span>
-          </div>
-          <div
-            class="option-block xs-4 sm-5 col margin-small"
-            @click.prevent="goToDoc"
-          >
-            <p style="font-size: 3rem;">
-              <span style="color: rgba(2, 2, 2, 0.6)">
-                <i class="fas fa-pen-alt" />
-              </span>
-            </p>
-            <span>
-              Write your doc
-            </span>
-          </div>
+          <VModalOption
+            icon="fa-file-upload"
+            message="Upload your Html"
+            @click.native="goToDoc"
+          />
+          <VModalOption
+            icon="fa-pen-alt"
+            message="Write your doc"
+            @click.native="goToDoc"
+          />
         </div>
       </div>
     </div>
@@ -52,8 +39,13 @@
 </template>
 
 <script>
+import VModalOption from '@/components/VModalOption'
+
 export default {
   name: 'TheInitModal',
+  components: {
+    VModalOption,
+  },
   data: () => {
     return {
       open: false,
@@ -62,22 +54,17 @@ export default {
   methods: {
     goToDoc() {
       this.open = false
-      setTimeout(() => this.$router.push({name: 'about'}), 200)
-    }
-  }
+      setTimeout(() => this.$router.push({ name: 'about' }), 200)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @media only screen and (min-width: 768px) {
   .modal .modal-body {
-      width: 30rem;
+    width: 30rem;
   }
-}
-
-.option-block {
-  cursor: pointer;
-  text-align: center;
 }
 </style>
 
