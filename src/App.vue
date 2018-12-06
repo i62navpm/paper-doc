@@ -1,29 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/about">About</RouterLink>
+    <TheNavBar />
+    <div class="container">
+      <RouterView />
     </div>
-    <RouterView />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import TheNavBar from '@/components/TheNavBar'
+
+export default {
+  components: {
+    TheNavBar,
+  },
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+</script>
+
+
+<style lang="scss" scoped>
+.container {
+  margin-top: 4rem;
 }
 </style>
