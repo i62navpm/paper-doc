@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "marked": "^0.5.2",
     "papercss": "^1.6.0",
     "register-service-worker": "^1.5.2",
+    "tui-editor": "^1.2.8",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
