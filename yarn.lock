@@ -684,6 +684,13 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@toast-ui/vue-editor@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@toast-ui/vue-editor/-/vue-editor-1.0.2.tgz#5e496fa295cff1f517a72deb7a215b7205afe03b"
+  integrity sha512-qDt4ngsxTieb+POS2GoG02PP8btKKFXuQ2xvzfjuwDzHufPMOoIOAUDdIG0yzsypL+QND2nBcYIqEmcRer45fQ==
+  dependencies:
+    tui-editor "^1.2.6"
+
 "@vue/babel-preset-app@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.2.0.tgz#a443acdbd34f66d7645db271d9ac58fbe4fe870d"
@@ -9388,7 +9395,7 @@ tui-color-picker@^2.2.0:
   dependencies:
     tui-code-snippet "^1.3.0"
 
-tui-editor@^1.2.8:
+tui-editor@^1.2.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/tui-editor/-/tui-editor-1.2.8.tgz#3fe18a85d87b80f34a94753689ae2ca6c1aaa4e1"
   integrity sha512-rllrdv7jGr0UqO3+/AuwkAqz6TXo0sJzdumtxonLP2hi0NSlo1uscDpoMtw8EXrHpCmIH2dziauPSfe6LF0qxQ==

@@ -1,53 +1,37 @@
 <template>
   <div class="row margin-none">
-    <div class="col sm-6 padding-bottom-none padding-top-none">
-      <div class="form-group">
-        <label>Description</label>
-        <textarea
-          class="input-block"
-          :value="input"
-          @input="update"
-        />
-      </div>
-    </div>
-
-    <div class="col sm-6 padding-bottom-none padding-top-none">
-      <div class="collapsible margin-top-large">
+    <div class="col sm-12 padding-bottom-none padding-top-none">
+      <div class="collapsible margin-top-small">
         <input
           id="collapsible"
           type="checkbox"
           name="collapsible"
         >
         <label for="collapsible">
-          View Markdown
+          Description
         </label>
         <div class="collapsible-body">
-          <div v-html="compiledMarkdown" />
+          <Editor
+            v-model="description"
+            preview-style="vertical"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import marked from 'marked'
-import debounce from 'lodash.debounce'
+import { Editor } from '@toast-ui/vue-editor'
 
 export default {
   name: 'VDescription',
+  components: {
+    Editor,
+  },
   data: function() {
     return {
-      input: '# hello',
+      description: '# hello',
     }
-  },
-  computed: {
-    compiledMarkdown: function() {
-      return marked(this.input, { sanitize: true })
-    },
-  },
-  methods: {
-    update: debounce(function(e) {
-      this.input = e.target.value
-    }, 300),
   },
 }
 </script>
