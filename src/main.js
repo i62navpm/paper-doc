@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 import 'papercss/dist/paper.css'
+import './assets/codeMirror.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.config.productionTip = false
